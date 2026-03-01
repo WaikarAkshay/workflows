@@ -1,15 +1,10 @@
 name: portfolio
 on:
-  workflow_dispatch: 
-    inputs:
-      environment:
-        description: this is environment value where workflow runs
-        required: true
-        type: choice
-        options:
-          - dev
-          - prod
-          - stage
+  push:
+    branches: [main]
+    paths: 
+      - '**.html'
+    
 permissions: 
   pages: write
   contents: write
