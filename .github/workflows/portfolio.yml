@@ -1,0 +1,30 @@
+name: portfolio
+on:
+  workflow_dispatch: 
+    inputs:
+      environment:
+        description: this is environment value where workflow runs
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - stage
+permissions: 
+  pages: write
+  contents: write
+  id-token: write
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: configure pages
+        uses: actions/configure-pages@v4
+
+      - name: upload static files
+        uses: actions/upload-pages-artifact@v4
+      
+          
