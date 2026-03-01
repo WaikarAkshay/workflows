@@ -24,5 +24,8 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: "."
+
+      - name: deploy github pages
+        uses: actions/deploy-pages@v4
       
           
