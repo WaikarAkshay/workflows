@@ -7,13 +7,21 @@ jobs:
     steps:
       - name: Code
         run: "Code clone from github"
-      
+  Test:
+    runs-on: ubuntu-latest
+    steps:
       - name: Test
         run: "Code Tested Successfuly"
 
+  Build:
+     runs-on: ubuntu-latest
+     steps:
       - name: Build
         run: "Code Build successfully"
 
+  Deploy:
+     runs-on: ubuntu-latest
+     steps:
       - name: Deploy
         run: "Code Delpoy successfully"
       
