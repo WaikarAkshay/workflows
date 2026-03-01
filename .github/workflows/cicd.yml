@@ -1,0 +1,19 @@
+name: CICD
+on:
+  workflow_dispatch: 
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code
+        run: "Code clone from github"
+      
+      - name: Test
+        run: "Code Tested Successfuly"
+
+      - name: Build
+        run: "Code Build successfully"
+
+      - name: Deploy
+        run: "Code Delpoy successfully"
+      
